@@ -1,0 +1,25 @@
+.user-post{
+    display: flex;
+}
+.user-post img{
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.post-name{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+}
+.post-name h5{
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.post-name p{
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 600;
+}

@@ -1,5 +1,148 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div class="container">
-    
+
+
+<nav class="navbar fixed-top navbar-bg">
+    <a class="navbar-brand" href="#">
+        <img src="../assets/imgs/Logo.png">
+    </a>
+    <h6>Profile Name</h6>
+    <input type="text" placeholder="Search friends" class="search-box form-control">
+    <a href="#"><h6>Find Friends</h6></a>
+    <div class="alert-icons">
+        <img src="../assets/imgs/smiley.png">
+        <img src="../assets/imgs/message.png">
+        <img src="../assets/imgs/bell.png">
+    </div>
+    <div class="user-info">
+        <img src="../assets/imgs/user-pic.jpg">
+        <div class="user-name ml-2">
+            <h6>Harry Potter
+                <span class="ml-1"><img src="../assets/imgs/dropdown.png" class="chevron-down"></span>
+            </h6>
+            <p class="mt-2">The boy who lived !</p>
+        </div>
+    </div>
+</nav>
+<div class="left-menu">
+    <i class="fas fa-bars"></i>
+    <i class="fas fa-newspaper"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-user-friends"></i>
+    <i class="fas fa-calendar-alt"></i>
+    <i class="fas fa-birthday-cake"></i>
+    <i class="fas fa-chart-bar"></i>
+    <i class="fas fa-user-circle"></i>
 </div>
-<router-outlet></router-outlet>
+<div class="main-content">
+    <div class="cover-img">
+        <img src="../assets/imgs/cover-pic.jpg">
+        <div class="timeline-menu">
+                <div class="timeline-menu-left">
+                    <a href="#">Timeline</a>
+                    <a href="#">About</a>
+                    <a href="#">Friends</a>
+                </div>
+                <div class="timeline-user-profile">
+                    <img src="../assets/imgs/user-pic.jpg">
+                </div>
+                <div class="timeline-menu-right">
+                 <a href="#">Photos</a>
+                 <a href="#">Videos</a>
+                 <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+             </div>
+    </div>
+</div>
+<div class="chat-menu">
+    <div class="chat-img">
+        <img src="../assets/imgs/user-pic-1.jpg">
+        <span class="active-chat"></span>
+    </div>
+    <div class="chat-img">
+        <img src="../assets/imgs/user-pic-2.jpg">
+    </div>
+    
+    <div class="chat-img">
+        <img src="../assets/imgs/user-pic-3.jpg">
+        <span class="active-chat"></span>
+    </div>
+    
+    <div class="chat-img">
+        <img src="../assets/imgs/user-pic-1.jpg">
+    </div>
+    
+    <div class="chat-img">
+        <img src="../assets/imgs/user-pic-3.jpg">
+    </div>
+    
+    <div class="chat-img">
+        <img src="../assets/imgs/user-pic-2.jpg">
+        <span class="active-chat"></span>
+    </div>
+    <div class="chat-img">
+        <img src="../assets/imgs/user-pic-3.jpg">
+        <span class="active-chat"></span>
+    </div>
+</div>
+
+</div>
+<div class="container mx-auto w-80 mt-20px d-flex">
+    <div class="container-left">
+            <div class="card">
+                <div class="card-body p-2">
+                    <h6 class="card-title p-1">
+                        Profile Intro
+                    </h6>
+                    <hr>
+                    <div class="about-user d-flex flex-column justify-content-between mt-1">
+                        <div class="about my-2">
+                        <h6>About Me:</h6>
+                        <p>Hi, I’m James, I’m 36 and I work as a Digital Designer for the “Daydreams” Agency in Pier 56.</p>
+                    </div>
+                    <div class="fav-shows my-2">
+                            <h6>Favourite TV Shows:</h6>
+                            <p>Breaking Good, RedDevil, People of Interest, The Running Dead, Found, American Guy.</p>
+                    </div>
+                    <div class="fav-music my-2">
+                        <h6>Favourite Music Bands / Artists:</h6>
+                        <p>Iron Maid, DC/AC, Megablow, The Ill, Kung Fighters, System of a Revenge.</p>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="container-card mx-auto">
+        <div *ngFor="let data of jsonData;let i = index">
+            <post-card [userData]="data" [userComments]="data.comments[i]"></post-card>
+        </div>
+    </div>
+    <div class="container-left">
+            <div class="card">
+                <div class="card-body p-2">
+                    <h6 class="card-title p-1">
+                        Profile Intro
+                    </h6>
+                    <hr>
+                    <div class="about-user d-flex flex-column justify-content-between mt-1">
+                        <div class="about my-2">
+                        <h6>About Me:</h6>
+                        <p>Hi, I’m James, I’m 36 and I work as a Digital Designer for the “Daydreams” Agency in Pier 56.</p>
+                    </div>
+                    <div class="fav-shows my-2">
+                            <h6>Favourite TV Shows:</h6>
+                            <p>Breaking Good, RedDevil, People of Interest, The Running Dead, Found, American Guy.</p>
+                    </div>
+                    <div class="fav-music my-2">
+                        <h6>Favourite Music Bands / Artists:</h6>
+                        <p>Iron Maid, DC/AC, Megablow, The Ill, Kung Fighters, System of a Revenge.</p>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    </div>
+<!-- <h2>One way Binding:</h2>
+<h3 class="mb-3">Welcome to {{title}}</h3>
+<h2>Two way Binding:</h2>
+<input type="text" placeholder="Enter some value" [(ngModel)]="name">
+<p class="mt-2">Input value is {{name}}</p>
+<h3 class="mt-3">Input Decorator</h3> -->
+<router-outlet></router-outlet> 
