@@ -13,6 +13,10 @@ import { PostCommentHeader } from './post-card/post-card-comment/post-comment-he
 import { PostCommentContent } from './post-card/post-card-comment/post-comment-content/post-comment-content';
 import { PostCardComment } from './post-card/post-card-comment/post-card-comment';
 import { PostCommentFooter } from './post-card/post-card-comment/post-comment-footer/post-comment-footer';
+import { SubCommentHeader } from './post-card/post-card-comment/post-sub-comment/sub-comment-header/sub-comment-header';
+import { SubCommentFooter } from './post-card/post-card-comment/post-sub-comment/sub-comment-footer/sub-comment-footer';
+import { SubCommentContent } from './post-card/post-card-comment/post-sub-comment/sub-comment-content/sub-comment-content';
+import { PostSubComments } from './post-card/post-card-comment/post-sub-comment/post-sub-comment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,11 @@ import { PostCommentFooter } from './post-card/post-card-comment/post-comment-fo
     PostCommentHeader,
     PostCardComment,
     PostCommentContent,
-    PostCommentFooter
+    PostCommentFooter,
+    SubCommentHeader,
+    SubCommentFooter,
+    SubCommentContent,
+    PostSubComments
   ],
   imports: [
     BrowserModule,

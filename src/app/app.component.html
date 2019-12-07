@@ -111,7 +111,7 @@
     </div>
     <div class="container-card mx-auto">
         <div *ngFor="let data of jsonData;let i = index">
-            <post-card [userData]="data" [userComments]="data.comments[i]"></post-card>
+            <post-card [userData]="data" [userComments]="data.comments[i]" [subCommentsArray]="data.comments[i].cmntReply[i]"></post-card>
         </div>
     </div>
     <div class="container-left">

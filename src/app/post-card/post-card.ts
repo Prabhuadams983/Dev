@@ -9,6 +9,7 @@ export class PostCard{
     private uname:string;
     @Input() userData;
     @Input() userComments;
+    @Input() subCommentsArray;
     constructor(){
         console.log("working",this.userData);
     }
