@@ -9,6 +9,6 @@ export class PostSubComments implements OnInit{
     @Input() subComments;
     
     ngOnInit(){
-        console.log("SubCOmments",this.subComments);
+        console.log("SubComments",this.subComments);
     }
 }

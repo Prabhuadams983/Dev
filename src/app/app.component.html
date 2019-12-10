@@ -111,10 +111,18 @@
     </div>
     <div class="container-card mx-auto">
         <div *ngFor="let data of jsonData;let i = index">
-            <post-card [userData]="data" [userComments]="data.comments[i]" [subCommentsArray]="data.comments[i].cmntReply[i]"></post-card>
+            <div *ngIf="data.type == 1">
+            <post-card [userData]="data" [userComments]="data.comments[i]" [subCommentsArray]="data.comments[i].cmntReply"></post-card>
+        </div>
+        <div *ngIf="data.type == 2">
+            <image-post-card [imagePost]="data"></image-post-card>
+        </div>
+        <div *ngIf="data.type == 3">
+            <polls-post-card [pollsData]="data"></polls-post-card>
+        </div>
         </div>
     </div>
-    <div class="container-left">
+    <div class="container-right">
             <div class="card">
                 <div class="card-body p-2">
                     <h6 class="card-title p-1">

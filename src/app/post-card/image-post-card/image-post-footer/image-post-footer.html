@@ -1,0 +1,24 @@
+
+<div class="w-100 d-flex" style="margin-top:0.5rem">
+    <a href="#"><i class="far fa-heart"></i></a>
+    <h5 class="likescount mx-auto">{{imagePostFoot.likesCount}}</h5>
+    <div class="likesPic mx-auto">
+        <span *ngFor="let likePic of imagePostFoot.likes">
+        <img [src]="likePic.img">
+    </span>
+    </div>
+    <div class="likesName mx-auto">
+        <span *ngFor="let likeName of imagePostFoot.likes">
+        <span>{{likeName.name+","}}</span>
+    </span>
+    <span>and 6 others liked your post</span>
+    </div>
+    <div class="comments mx-auto">
+        <a href="#" [hidden]="visible"><i class="far fa-comment-alt"></i></a>
+        <h5 class="cmntCount">{{imagePostFoot.cmtCount}}</h5>
+    </div>
+    <div class="shares mx-auto">
+        <a href="#"><i class="far fa-share-square"></i></a>
+        <h5 class="shareCount">{{imagePostFoot.shareCnt}}</h5>
+    </div>
+</div>

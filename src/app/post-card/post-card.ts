@@ -12,6 +12,7 @@ export class PostCard{
     @Input() subCommentsArray;
     constructor(){
         console.log("working",this.userData);
+        console.log("comments",this.userComments);
     }
     change(){
         let a = "Voldemort";

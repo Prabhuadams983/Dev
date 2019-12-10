@@ -2,14 +2,14 @@
     display: flex;
 }
 .user-post img{
-    width: 25px;
-    height: 25px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     border-radius: 50%;
-    margin-top: 5px;
+    margin:10px auto;
 }
 .post-name{
-    margin-top: 6px;
+    margin-top: 15px;
     margin-bottom: auto;
     margin-left: 10px;
 }
@@ -36,4 +36,63 @@
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 10px;
+    margin-top: 10px;
+}
+.image-post img{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+.likescount{
+    margin-left: 10px;
+}
+.likesPic img{
+    margin-left:-5px;
+    width: 25px;
+    height: 25px;
+    object-fit:cover;
+    border-radius: 50%;
+}
+.likesName{
+    width: 200px;
+    line-height: 1;
+    text-align: center;
+}
+.likesName span{
+    font-size: 0.7rem;
+    word-break: break-word;
+}
+.comments,.shares{
+    display: flex;
+    margin-left: 10px;
+}
+.comments a,.shares a{
+    color:grey;
+    margin-right: 10px;
+    font-size: 1.3rem;
+}
+.w-100{
+    width: 100%;
+}
+.d-flex{
+    display: flex;
+}
+.user-cmnt-img{
+    display: flex;
+}
+.sub-post-name{
+    margin-left: 5px;
+}
+.user-cmnt-img img{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.sub-post-name h5{
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.sub-post-name p{
+    font-size: 0.6rem;
 }
