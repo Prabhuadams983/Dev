@@ -8,11 +8,9 @@ export class PostCard{
     private name:string;
     private uname:string;
     @Input() userData;
-    @Input() userComments;
     @Input() subCommentsArray;
     constructor(){
         console.log("working",this.userData);
-        console.log("comments",this.userComments);
     }
     change(){
         let a = "Voldemort";

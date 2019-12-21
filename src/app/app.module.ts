@@ -25,6 +25,7 @@ import { PollsPostCard } from './post-card/polls-post-card/polls-post-card';
 import { PollsPostContent } from './post-card/polls-post-card/polls-post-content/polls-post-content';
 import { PollsPostHeader } from './post-card/polls-post-card/polls-post-header/polls-post-header';
 import { PollsPostFooter } from './post-card/polls-post-card/polls-post-footer/polls-post-footer';
+import {PostCardService} from './Services/post-card-service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -56,7 +57,7 @@ import { PollsPostFooter } from './post-card/polls-post-card/polls-post-footer/p
     ReactiveFormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PostCardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

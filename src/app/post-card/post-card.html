@@ -6,9 +6,6 @@
         <post-content [content]="userData"></post-content>
         <post-footer [footer]="userData"></post-footer>
 </div>
-<post-card-comment [comments]="userComments"></post-card-comment>
-<div *ngFor="let data of subCommentsArray">
-<post-sub-comments [subComments]="data"></post-sub-comments>
-</div>
+<post-card-comment [comments]="userData.comments"></post-card-comment>
     </div>
 </div>

@@ -1,6 +1,9 @@
 
+<div *ngFor="let cmnts of comments">
 <div class="cmnt-bg">
-<post-comment-header [cmntHeader]="comments"></post-comment-header>
-<post-comment-content [commentMsg]="comments"></post-comment-content>
-<post-comment-footer [commentLikes]="comments"></post-comment-footer>
+<post-comment-header [cmntHeader]="cmnts"></post-comment-header>
+<post-comment-content [commentMsg]="cmnts"></post-comment-content>
+<post-comment-footer [commentLikes]="cmnts"></post-comment-footer>
+<post-sub-comments [subComments]="cmnts.cmntReply"></post-sub-comments>
+</div>
 </div>

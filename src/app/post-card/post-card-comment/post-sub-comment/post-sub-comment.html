@@ -1,5 +1,8 @@
+
+<div *ngFor="let data of subComments">
 <div class="cmnt-bg">
-<sub-comment-header [subCommentHead]="subComments"></sub-comment-header>
-<sub-comment-content [subCommentContent]="subComments"></sub-comment-content>
-<sub-comment-footer [subCommentFoot]="subComments"></sub-comment-footer>
+<sub-comment-header [subCommentHead]="data"></sub-comment-header>
+<sub-comment-content [subCommentContent]="data"></sub-comment-content>
+<sub-comment-footer [subCommentFoot]="data"></sub-comment-footer>
+</div>
 </div>
