@@ -1,0 +1,13 @@
+<div class="container-card mx-auto">
+  <div *ngFor="let data of jsonData;let i = index">
+      <div *ngIf="data.type == '1'">
+          <post-card [userData]="data"></post-card>
+      </div>
+      <div *ngIf="data.type == '2'">
+          <image-post-card [imagePost]="data"></image-post-card>
+      </div>
+      <div *ngIf="data.type == '3'">
+          <polls-post-card [pollsData]="data"></polls-post-card>
+      </div>
+  </div>
+</div>

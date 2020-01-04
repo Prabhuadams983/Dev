@@ -1,7 +1,4 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import {PostCardService } from './Services/post-card-service';
-import { EMPTY } from 'rxjs';
-import { Serializer } from '@angular/compiler';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +7,6 @@ import { Serializer } from '@angular/compiler';
 export class AppComponent implements OnInit {
   
   public title = 'Angular App';
-  private jsonData;
   public type = 0;
   private hideModal;
   private userImg = '../assets/imgs/user-pic.jpg';
@@ -33,9 +29,8 @@ export class AppComponent implements OnInit {
     img : "https://cdn.pixabay.com/photo/2015/07/09/00/29/woman-837156__340.jpg"
   };
 
-constructor(private PostCardService:PostCardService){ }
+constructor(){ }
 ngOnInit(){
-  this.jsonData=this.PostCardService.jsonData;
 }
 alert(){
   this.hideAlert = 'none';

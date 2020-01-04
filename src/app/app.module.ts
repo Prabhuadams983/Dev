@@ -26,6 +26,8 @@ import { PollsPostContent } from './post-card/polls-post-card/polls-post-content
 import { PollsPostHeader } from './post-card/polls-post-card/polls-post-header/polls-post-header';
 import { PollsPostFooter } from './post-card/polls-post-card/polls-post-footer/polls-post-footer';
 import {PostCardService} from './Services/post-card-service';
+import { FriendsListComponent } from './friends-list/friends-list.component';
+import { MainContentComponent } from './main-content/main-content.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,9 @@ import {PostCardService} from './Services/post-card-service';
     PollsPostCard,
     PollsPostHeader,
     PollsPostContent,
-    PollsPostFooter
+    PollsPostFooter,
+    FriendsListComponent,
+    MainContentComponent
   ],
   imports: [
     BrowserModule,
