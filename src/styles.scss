@@ -1,98 +1,144 @@
-.user-post{
+.user-post {
     display: flex;
 }
-.user-post img{
+
+.user-post img {
     width: 50px;
     height: 50px;
     object-fit: cover;
     border-radius: 50%;
-    margin:10px auto;
+    margin: 10px auto;
 }
-.post-name{
+
+.post-name {
     margin-top: 15px;
     margin-bottom: auto;
     margin-left: 10px;
 }
-.post-name h5{
+
+.post-name h5 {
     font-size: 0.9rem;
     font-weight: 700;
     margin-bottom: 0px;
 }
-.post-name p{
+
+.post-name p {
     text-align: left;
     font-size: 0.8rem;
     font-weight: 600;
 }
-.reply{
+
+.reply {
     font-size: 0.9rem;
     margin-bottom: 0rem;
 }
-.likescount{
+
+.likescount {
     font-size: 0.9rem;
     margin-top: 3px;
     margin-bottom: 0px;
 }
-.comment-msg{
+
+.comment-msg {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 10px;
     margin-top: 10px;
 }
-.image-post img{
+
+.image-post img {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
 }
-.likescount{
+
+.likescount {
     margin-left: 10px;
 }
-.likesPic img{
-    margin-left:-5px;
+
+.likesPic img {
+    margin-left: -5px;
     width: 25px;
     height: 25px;
-    object-fit:cover;
+    object-fit: cover;
     border-radius: 50%;
 }
-.likesName{
+
+.likesName {
     width: 200px;
     line-height: 1;
     text-align: center;
 }
-.likesName span{
+
+.likesName span {
     font-size: 0.7rem;
     word-break: break-word;
 }
-.comments,.shares{
+
+.comments,
+.shares {
     display: flex;
     margin-left: 10px;
 }
-.comments a,.shares a{
-    color:grey;
+
+.comments a,
+.shares a {
+    color: grey;
     margin-right: 10px;
     font-size: 1.3rem;
 }
-.w-100{
+
+.w-100 {
     width: 100%;
 }
-.d-flex{
+
+.w-80 {
+    width: 80%!important;
+}
+
+.d-flex {
     display: flex;
 }
-.user-cmnt-img{
+
+.user-cmnt-img {
     display: flex;
 }
-.sub-post-name{
+
+.sub-post-name {
     margin-left: 5px;
 }
-.user-cmnt-img img{
+
+.user-cmnt-img img {
     width: 30px;
     height: 30px;
     object-fit: cover;
     border-radius: 50%;
 }
-.sub-post-name h5{
+
+.sub-post-name h5 {
     font-weight: 600;
     font-size: 0.9rem;
 }
-.sub-post-name p{
+
+.sub-post-name p {
     font-size: 0.6rem;
+}
+
+.friends-list-img {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.friend-name {
+    font-size: 0.9rem;
+    margin-left: 10px;
+    margin-bottom: 0rem;
+}
+
+.friend-card {
+    width: 144%;
+    margin: 0px 10px 20px;
 }

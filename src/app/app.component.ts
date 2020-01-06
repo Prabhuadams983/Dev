@@ -1,3 +1,4 @@
+import { PostCardService } from './Services/post-card-service';
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
 @Component({
   selector: 'app-root',
@@ -29,7 +30,7 @@ export class AppComponent implements OnInit {
     img : "https://cdn.pixabay.com/photo/2015/07/09/00/29/woman-837156__340.jpg"
   };
 
-constructor(){ }
+constructor(private PostCardService:PostCardService){ }
 ngOnInit(){
 }
 alert(){

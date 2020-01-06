@@ -37,9 +37,9 @@
         <img src="../assets/imgs/cover-pic.jpg">
         <div class="timeline-menu">
             <div class="timeline-menu-left">
-                <a href="#">Timeline</a>
-                <a href="#">About</a>
-                <a href="#" routerLink="/friends-list">Friends</a>
+                <a routerLink="">Timeline</a>
+                <a>About</a>
+                <a routerLink="/friends-list">Friends</a>
             </div>
             <div class="timeline-user-profile">
                 <img src="../assets/imgs/user-pic.jpg" data-toggle="modal" data-target="#myModal">
@@ -109,19 +109,6 @@
             </div>
         </div>
     </div>
-    <!-- <div class="container-card mx-auto">
-        <div *ngFor="let data of jsonData;let i = index">
-            <div *ngIf="data.type == '1'">
-                <post-card [userData]="data"></post-card>
-            </div>
-            <div *ngIf="data.type == '2'">
-                <image-post-card [imagePost]="data"></image-post-card>
-            </div>
-            <div *ngIf="data.type == '3'">
-                <polls-post-card [pollsData]="data"></polls-post-card>
-            </div>
-        </div>
-    </div> -->
     <router-outlet></router-outlet>
     <div class="container-right ml-auto">
         <div class="card">
@@ -158,43 +145,42 @@
     </div>
     <div class="modal-content">
         <div class="modal-header">
-        <button type="button" class="close"><i class="fa fa-close" (click)="hide()"></i></button>
-    </div>
-            <select class="form-control" [(ngModel)]="type" #postType>
+            <button type="button" class="close"><i class="fa fa-close" (click)="hide()"></i></button>
+        </div>
+        <select class="form-control" [(ngModel)]="type" #postType>
                 <option value=0>Select Post Type</option>
                 <option value=1>Message Post</option>
                 <option value=2>Image Post</option>
                 <option value=3>Polls Post</option>
             </select>
-            <div *ngIf="type == '1'">
-                <div class="form-group my-3">
-                    <input type="text" name="msgPost" placeholder="Enter Message" class="form-control p-2" [(ngModel)]="msg">
-                </div>
+        <div *ngIf="type == '1'">
+            <div class="form-group my-3">
+                <input type="text" name="msgPost" placeholder="Enter Message" class="form-control p-2" [(ngModel)]="msg">
             </div>
-            <div *ngIf="type == '2'">
-                <div class="form-group my-3">
-                    <input type="text" name="imagePOst" placeholder="URL" class="form-control p-2" [(ngModel)]="image">
-                </div>
+        </div>
+        <div *ngIf="type == '2'">
+            <div class="form-group my-3">
+                <input type="text" name="imagePOst" placeholder="URL" class="form-control p-2" [(ngModel)]="image">
             </div>
-            <div *ngIf="type == '3'">
-                <div class="form-group my-3">
-                    <input type="text" name="pollsQuestion" placeholder="Enter Question" class="form-control p-2"
-                    [(ngModel)]="pollsData.question">
-                </div>
+        </div>
+        <div *ngIf="type == '3'">
+            <div class="form-group my-3">
+                <input type="text" name="pollsQuestion" placeholder="Enter Question" class="form-control p-2" [(ngModel)]="pollsData.question">
+            </div>
 
-                <div class="form-group my-3">
-                    <input type="text" name="pollsAns1" placeholder="Enter Answer 1" class="form-control p-2" [(ngModel)]="pollsData.ans1">
-                </div>
-
-                <div class="form-group my-3">
-                    <input type="text" name="pollsAns2" placeholder="Enter Answer 2" class="form-control p-2" [(ngModel)]="pollsData.ans2">
-                </div> 
-
-                <div class="form-group my-3">
-                    <input type="text" name="pollsAns3" placeholder="Enter Answer 3" class="form-control p-2" [(ngModel)]="pollsData.ans3">
-                </div>
+            <div class="form-group my-3">
+                <input type="text" name="pollsAns1" placeholder="Enter Answer 1" class="form-control p-2" [(ngModel)]="pollsData.ans1">
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-md btn-block btn-primary float-right" (click)="createPost(postType.value)">Add Post</button>
+
+            <div class="form-group my-3">
+                <input type="text" name="pollsAns2" placeholder="Enter Answer 2" class="form-control p-2" [(ngModel)]="pollsData.ans2">
             </div>
-</div>
+
+            <div class="form-group my-3">
+                <input type="text" name="pollsAns3" placeholder="Enter Answer 3" class="form-control p-2" [(ngModel)]="pollsData.ans3">
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-md btn-block btn-primary float-right" (click)="createPost(postType.value)">Add Post</button>
+        </div>
+    </div>

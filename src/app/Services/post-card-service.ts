@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 
 @Injectable()
 export class PostCardService{
