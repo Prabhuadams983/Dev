@@ -145,6 +145,34 @@ export class PostCardService{
         ]
       }
     ];
+
+    public friendsList=[
+      {
+        "friendId": 33,
+        "friendName": "Deanna",
+        "friendImg": "https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727__340.jpg"
+      },
+      {
+        "friendId": 34,
+        "friendName": "Randall",
+        "friendImg": "https://cdn.pixabay.com/photo/2017/02/02/13/48/girl-2032802__340.jpg"
+      },
+      {
+        "friendId": 5,
+        "friendName": "Katrina",
+        "friendImg": "https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727__340.jpg"
+      },
+      {
+        "friendId": 46,
+        "friendName": "Galloway",
+        "friendImg": "https://cdn.pixabay.com/photo/2017/01/23/19/40/woman-2003647__340.jpg"
+      },
+      {
+        "friendId": 25,
+        "friendName": "Hess",
+        "friendImg": "https://cdn.pixabay.com/photo/2017/02/02/13/48/girl-2032802__340.jpg"
+      }
+    ];
     getPost(post){
       console.log("Data from Component",post);
       this.jsonData.push(post);

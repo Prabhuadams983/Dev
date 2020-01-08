@@ -1,3 +1,4 @@
+import { PostCardService } from './../Services/post-card-service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FriendsListComponent implements OnInit {
 
-  constructor() { }
+  public friendsListJson;
+  public value='none';
+
+  constructor(private PostCardService:PostCardService){
+    console.log("Friends-List-Comp");
+  }
+  
 
   ngOnInit() {
+    this.friendsListJson=this.PostCardService.friendsList;
   }
 
 }

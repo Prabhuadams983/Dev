@@ -1,12 +1,18 @@
 <div class="card friend-card">
     <div class="card-body">
-        <div class="d-flex flex-row align-items-center">
-            <img src="../../assets/imgs/user-pic-1.jpg" width="35" height="35" class="friends-list-img">
-            <h5 class="friend-name">Draco Malfoy</h5>
-            <div class="ml-auto">
-                <button type="button" class="btn btn-sm btn-primary">Unfriend</button>
-                <button type="button" class="btn btn-sm btn-dark ml-1">View Profile</button>
+        <h5 class="text-center text-capitalize pb-2">
+            <i class="fas fa-user-friends mr-1"></i>Friends</h5>
+        <div *ngFor="let list of friendsListJson">
+            <div class="d-flex mb-4 align-items-center">
+                <img src="{{list.friendImg}}" width="35" height="35" class="friends-list-img">
+                <h5 class="friend-name">{{list.friendName}}</h5>
+                <div class="ml-auto">
+                    <button type="button" class="btn btn-sm btn-primary">Unfriend</button>
+                    <button type="button" class="btn btn-sm btn-dark ml-1" routerLink="friends-details">View Profile</button>
+                </div>
             </div>
+            <router-outlet></router-outlet>
+            <hr>
         </div>
     </div>
 </div>
