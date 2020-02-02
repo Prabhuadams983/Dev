@@ -13,7 +13,7 @@
         <img src="../assets/imgs/bell.png">
     </div>
     <div class="user-info">
-        <img [src]="userImg">
+        <img [src]="userImg" style="cursor:pointer" (click)="imageModal()">
         <div class="user-name ml-2">
             <h6>Harry Potter
                 <span class="ml-1"><img src="../assets/imgs/dropdown.png" class="chevron-down"></span>
@@ -42,7 +42,7 @@
                 <a routerLink="/friends-list" routerLinkActive="active">Friends</a>
             </div>
             <div class="timeline-user-profile">
-                <img src="../assets/imgs/user-pic.jpg" data-toggle="modal" data-target="#myModal">
+                <img [src]="profilePic" data-toggle="modal" data-target="#myModal">
             </div>
             <div class="timeline-menu-right">
                 <a href="#">Photos</a>
@@ -145,7 +145,7 @@
     </div>
     <div class="modal-content">
         <div class="modal-header">
-            <button type="button" class="close"><i class="fa fa-close" (click)="hide()"></i></button>
+            <button type="button" class="close"><i class="fas fa-times" (click)="hide()"></i></button>
         </div>
         <select class="form-control" [(ngModel)]="type" #postType>
                 <option value=0>Select Post Type</option>
@@ -184,3 +184,19 @@
             <button type="button" class="btn btn-md btn-block btn-primary float-right" (click)="createPost(postType.value)">Add Post</button>
         </div>
     </div>
+</div>
+<div class="modal" id="changePicture" [style.display]="hideImgModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header ml-auto">
+                        <button type="button" class="close"><i class="fas fa-times" (click)="hideImg()"></i></button>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control p-1" placeholder="Image URL" #prflImg>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-md btn-outline-primary float-right" (click)="newPrflImg(prflImg.value)">Upload</button>
+                </div>
+            </div>
+        </div>

@@ -1,13 +1,53 @@
 import { Injectable } from '@angular/core';
-import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable()
 export class PostCardService{
+  subjectObs = new Subject();
+  
    public jsonData = [
+    {
+      "userId": 1200,
+      "name": "Prabhu",
+      "img": "https://images.pexels.com/photos/516927/pexels-photo-516927.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+      "time": 8,
+      "type": '1',
+      "msgPost": "as;dif jijweoirw vjfjo2v kfjsj vsW",
+      "likesCount": 100,
+      "likes": [
         {
+          "img": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name": "Derick",
+        },
+        {
+          "img": "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "name": "Cathy"
+        }
+      ],
+      "cmtCount": 35,
+      "shareCnt": 56,
+      "comments": [
+        {
+          "name": "Barbara",
+          "cmntTime": 6,
+          "img": "https://images.pexels.com/photos/516927/pexels-photo-516927.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+          "cmnt": "Labore irure qui et commodo occaecat reprehenderit laborum id aute.",
+          "cmntLikes": 58,
+          "cmntReply": [
+            {
+              "name": "Marks",
+              "img": "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+              "replyMsg": "Aliquip sint voluptate fugiat anim.",
+              "replyLikes": 62
+            }
+          ]
+        }
+      ]
+    },    
+    {
           "userId": "userId0",
-          "name": "Marquita",
-          "img": "https://cdn.pixabay.com/photo/2015/07/09/00/29/woman-837156__340.jpg",
+          "name": "Harry",
+          "img": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
           "time": 8,
           "type": '1',
           "msgPost": "Commodo reprehenderit aliqua aliquip do do ad voluptate eu.",
@@ -18,7 +58,7 @@ export class PostCardService{
               "name": "Derick",
             },
             {
-              "img": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+              "img": "https://images.pexels.com/photos/516927/pexels-photo-516927.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
               "name": "Cathy"
             }
           ],

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { PostCardService } from 'src/app/Services/post-card-service';
 
 @Component({
     selector:'post-header',
@@ -7,9 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostHeader implements OnInit{
     @Input() header;
-    constructor(){}
+    constructor(private postCardService:PostCardService){}
     ngOnInit(){
         console.log('header',this.header);
+       this.postCardService.subjectObs.subscribe((url:string)=>{
+        this.header.img = url;
+       });
     }
 
     

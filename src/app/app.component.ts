@@ -1,5 +1,6 @@
 import { PostCardService } from './Services/post-card-service';
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Observable, Subject } from 'rxjs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,20 +11,22 @@ export class AppComponent implements OnInit {
   public title = 'Angular App';
   public type = 0;
   private hideModal;
-  private userImg = '../assets/imgs/user-pic.jpg';
+  private userImg = "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500";
   private hideAlert = 'none';
+  private hideImgModal;
   private msgData:any= new Object();
   private pollsPost={};
   private date = new Date();
   private msg;
   private image;
+  private changePost={};
   private pollsData={
     question:"",
     ans1:"",
     ans2:"",
     ans3:""
   };
-
+private profilePic = "../assets/imgs/user-pic.jpg";
   public userData = {
     name : "Prabhu",
     id : "1234567890",
@@ -32,6 +35,10 @@ export class AppComponent implements OnInit {
 
 constructor(private PostCardService:PostCardService){ }
 ngOnInit(){
+  this.PostCardService.subjectObs.subscribe((url:string)=>{
+    this.userImg = url;
+    this.profilePic =url;
+  });
 }
 alert(){
   this.hideAlert = 'none';
@@ -42,9 +49,19 @@ hide(){
 show(){
   this.hideModal='block';
 }
+imageModal(){
+  this.hideImgModal = 'block';
+}
+hideImg(){
+  this.hideImgModal='none';
+}
+
+
+subjectObs = new Subject();
+
 
 createPost(type){
-  let uio = {
+  var uio = {
     "userId": "userId0",
     "name": this.userData.name,
     "img": this.userData.img,
@@ -57,7 +74,7 @@ createPost(type){
     "shareCnt": 0,
     "comments": []
   };
-  let imageObj = {
+  var imageObj = {
     "userId": "userId0",
     "name": this.userData.name,
     "img": this.userData.img,
@@ -70,7 +87,7 @@ createPost(type){
     "shareCnt": 0,
     "comments": []
   };
-  let pollsObj= {
+  var pollsObj= {
     "userId": "userId2",
     "name": this.userData.name,
     "img": this.userData.img,
@@ -128,6 +145,10 @@ createPost(type){
 }
 passData(data){
   this.PostCardService.getPost(data);
+}
+newPrflImg(url){
+  this.PostCardService.subjectObs.next(url);
+  this.hideImgModal='none';
 }
 
 }
