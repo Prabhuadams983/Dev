@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {map} from 'rxjs/add/operator/map';
 @Injectable()
 export class PostCardService{
+  constructor(private http:HttpClient){}
   subjectObs = new Subject();
   
-   public jsonData = [
+   public jsonData =[
     {
       "userId": 1200,
       "name": "Prabhu",
@@ -213,8 +215,9 @@ export class PostCardService{
         "friendImg": "https://cdn.pixabay.com/photo/2017/02/02/13/48/girl-2032802__340.jpg"
       }
     ];
-    getPost(post){
-      console.log("Data from Component",post);
-      this.jsonData.push(post);
+    getPost(messagePost){
+      const headers = new HttpHeaders({'Content-Type': 'application/Json'});
+      console.log("Data from Component",messagePost);
+      return this.http.post("https://angular-database-5d40d.firebaseio.com/messagePost.json",messagePost,{headers:headers});
     }
 }

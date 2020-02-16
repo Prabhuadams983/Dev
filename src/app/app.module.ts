@@ -29,6 +29,10 @@ import {PostCardService} from './Services/post-card-service';
 import { FriendsListComponent } from './friends-list/friends-list.component';
 import { MainContentComponent } from './main-content/main-content.component';
 import { FriendsDetailsComponent } from './friends-list/friends-details/friends-details.component';
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireDatabaseModule} from '@angular/fire/database';
+import {HttpClientModule} from '@angular/common/http';
+import { environment } from 'src/environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,7 +65,10 @@ import { FriendsDetailsComponent } from './friends-list/friends-details/friends-
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    HttpClientModule
   ],
   providers: [PostCardService],
   bootstrap: [AppComponent]

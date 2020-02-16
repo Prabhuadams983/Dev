@@ -144,7 +144,11 @@ createPost(type){
   }
 }
 passData(data){
-  this.PostCardService.getPost(data);
+  console.log(data);
+  this.PostCardService.getPost(data).subscribe((response)=>{
+    console.log("Response from Firebase:",response);
+    this.PostCardService.jsonData.push(response);
+  });
 }
 newPrflImg(url){
   this.PostCardService.subjectObs.next(url);
